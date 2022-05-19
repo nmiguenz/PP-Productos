@@ -1,0 +1,109 @@
+
+  <body class="bg-light">
+    
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+          <h2>Alta producto</h2>
+          <!-- <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> -->
+        </div>
+    
+        <div class="row g-5">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-primary">Lista Paises</span>
+              <!-- <span class="badge bg-primary rounded-pill">3</span> -->
+            </h4>
+
+            <app-alta-producto (paisSeleccionado)="obtenerNacionalidadProdcuto($event)"></app-alta-producto>
+    
+            <!-- <form class="card p-2">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Promo code">
+                <button type="submit" class="btn btn-secondary">Redeem</button>
+              </div>
+            </form> -->
+          </div>
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Nuevo producto</h4>
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="codigo" class="form-label">Código</label>
+                  <input type="text" class="form-control" id="codigo" placeholder="" value="" formControlName="codigo" >
+                  <small>El código es requerido</small>
+                </div>
+    
+                <div class="col-sm-6">
+                  <label for="descripcion" class="form-label">Descripcion</label>
+                  <input type="text" class="form-control" id="descripcion" placeholder="" value="" formControlName="descripcion" >
+                  <small>El código es requerido</small>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="precio" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="precio" placeholder="" value="" formControlName="precio">
+                    <small>El precio es requerido</small>
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="stock" class="form-label">Stock</label>
+                    <input type="number" class="form-control" id="stock" placeholder="" value="" formControlName="stock">
+                    <small>El stock es requerido</small>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-9">
+                      <label for="nacionalidad">Nacionalidad</label>
+                      <input type="text" class="form-control" id="nacionalidad" placeholder="Ingrese una nacionalidad" formControlName="nacionalidad"  required readonly>
+                      <!-- <small  *ngIf="formGroup.controls.nacionalidad.errors?.required &&  formGroup.controls.nacionalidad.touched">La nacionalidad es obligatoria</small> -->
+                    </div>
+        
+                    <!-- <div class="col-md-3">
+                      <img *ngIf="bandera" [src]="bandera" alt="">
+                    </div> -->
+                 </div>
+
+                    <div class="col">
+                        <label for="comestible" class="form-label">Comestibre</label>
+                        <select class="form-select" id="comestible" formControlName="comestible" required>
+                          <option value="">Choose...</option>
+                          <option value="true">Si</option>
+                          <option value="false">No</option>
+                        </select>
+                        <small></small>
+                      </div>
+        
+              <hr class="my-4">
+    
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">Confirmar inclusión</label>
+              </div>
+    
+              <hr class="my-4">
+    
+            </div>
+              <button class="w-100 btn btn-primary btn-lg" type="submit">Agregar</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2022 Miguenz</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    </div>
+    
+    
+        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    
+      </body>
+    
+    
